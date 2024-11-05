@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.example.database_ui_localization.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="145.0" prefWidth="343.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-spacing: 25px;">
+               <children>
+                  <Label text="Select Language:" />
+                  <Label fx:id="firstNameText" text="First Name:" />
+                  <Label fx:id="lastNameText" text="Last Name:" />
+                  <Label fx:id="emailText" text="Email:" />
+               </children>
+            </VBox>
+            <VBox prefHeight="145.0" prefWidth="234.0" style="-fx-spacing: 15px;">
+               <children>
+                  <ChoiceBox fx:id="selection" onAction="#onLanguageChange" prefWidth="150.0" />
+                  <TextField fx:id="firstNameField" prefHeight="25.0" prefWidth="134.0" />
+                  <TextField fx:id="lastNameField" />
+                  <TextField fx:id="emailField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="saveButton" onAction="#save" mnemonicParsing="false" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
